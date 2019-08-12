@@ -1,0 +1,97 @@
+$break-small: 641px;
+$break-medium: 1024px;
+
+$paragraphTextColor:white;
+
+html {
+    width: 100%
+}
+
+body {
+    max-width: 41%;
+    margin: auto;
+    padding: 12px;
+
+    @media screen and (max-width: $break-small) {
+        max-width: 88%;
+    }
+}
+
+h1 {
+    color: rgb(194, 58, 36)
+}
+
+// #showDetail{
+//     display:initial;
+// }
+
+.wrapper {
+    display: grid; // grid-template: "L M";
+    grid-template-columns: 50% 50%;
+    grid-gap: 10px 10px;
+
+    @media screen and (max-width: $break-small) {
+        grid-gap: 8px 8px;
+    }
+}
+
+.bothColLeft {
+    grid-column: span 2;
+    text-align: left;
+}
+
+.sectionOne {
+    background-color: rgb(238, 238, 238);
+    padding: 8px;
+
+    img {
+        display: block;
+        margin: auto;
+    }
+
+    p {
+        // display: block;
+        text-align: center;
+    }
+}
+
+.sectionTwo {
+    padding: 8px;
+    background-color: rgb(127, 127, 127);
+
+    p {
+        display: inline-block;
+        color: $paragraphTextColor;
+
+        @media screen and (max-width: $break-small) {
+            max-width: 67%;
+            margin: 8px 0;
+        }
+    }
+
+    img {
+        float: right;
+
+        @media screen and (max-width: $break-small) {
+            max-width: 33%;
+        }
+    }
+}
+
+.sectionThree {
+    padding: 8px;
+    background-color: rgb(191, 49, 27);
+    text-align: right;
+
+    p {
+        color: $paragraphTextColor;
+    }
+
+    img {
+        float: left;
+
+        @media screen and (max-width: $break-small) {
+            max-width: 45%;
+        }
+    }
+}

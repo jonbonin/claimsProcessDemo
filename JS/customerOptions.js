@@ -9,8 +9,8 @@
             shadowRoot.appendChild(content.cloneNode(true));
 
             //make sure that sections are accuratly being displayed
-            this.shadowRoot.querySelector("#emplUpdateWrapper").style.display = 'none';
-            this.shadowRoot.querySelector("#dspEmplInfo").style.display = 'block';
+            this.shadowRoot.querySelector("#showDetail").style.display = "none";
+            this.shadowRoot.querySelector("#hideDetail").style.display = 'initial';
         };
     });
 })()

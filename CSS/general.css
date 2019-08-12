@@ -1,0 +1,88 @@
+html {
+  width: 100%;
+}
+
+body {
+  max-width: 41%;
+  margin: auto;
+  padding: 12px;
+}
+@media screen and (max-width: 641px) {
+  body {
+    max-width: 88%;
+  }
+}
+
+h1 {
+  color: #c23a24;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 10px 10px;
+}
+@media screen and (max-width: 641px) {
+  .wrapper {
+    grid-gap: 8px 8px;
+  }
+}
+
+.bothColLeft {
+  grid-column: span 2;
+  text-align: left;
+}
+
+.sectionOne {
+  background-color: #eeeeee;
+  padding: 8px;
+}
+.sectionOne img {
+  display: block;
+  margin: auto;
+}
+.sectionOne p {
+  text-align: center;
+}
+
+.sectionTwo {
+  padding: 8px;
+  background-color: #7f7f7f;
+}
+.sectionTwo p {
+  display: inline-block;
+  color: white;
+}
+@media screen and (max-width: 641px) {
+  .sectionTwo p {
+    max-width: 67%;
+    margin: 8px 0;
+  }
+}
+.sectionTwo img {
+  float: right;
+}
+@media screen and (max-width: 641px) {
+  .sectionTwo img {
+    max-width: 33%;
+  }
+}
+
+.sectionThree {
+  padding: 8px;
+  background-color: #bf311b;
+  text-align: right;
+}
+.sectionThree p {
+  color: white;
+}
+.sectionThree img {
+  float: left;
+}
+@media screen and (max-width: 641px) {
+  .sectionThree img {
+    max-width: 45%;
+  }
+}
+
+/*# sourceMappingURL=general.css.map */
