@@ -1,0 +1,163 @@
+$break-small: 641px;
+$break-medium: 1024px;
+
+$paragraphTextColor:white;
+
+html {
+    width: 100%
+}
+
+body {
+    max-width: 38%;
+    margin: auto;
+    padding: 12px;
+
+    @media screen and (max-width: $break-small) {
+        max-width: 88%;
+    }
+}
+
+h1 {
+    color: rgb(194, 58, 36)
+}
+
+#showDetail{
+    display:none;
+}
+
+.wrapper {
+    display: grid; // grid-template: "L M";
+    grid-template-columns: 50% 50%;
+    grid-gap: 10px 10px;
+
+    @media screen and (max-width: $break-small) {
+        grid-gap: 6px 6px;
+    }
+}
+
+.bothColLeft {
+    grid-column: span 2;
+    text-align: left;
+}
+
+.sectionOne {
+    background-color: rgb(238, 238, 238);
+    padding: 8px;
+
+    img {
+        display: block;
+        margin: auto;
+    }
+
+    p {
+        // display: block;
+        text-align: center;
+    }
+}
+
+.sectionTwo {
+    padding: 8px;
+    background-color: rgb(127, 127, 127);
+
+    p {
+        display: inline-block;
+        color: $paragraphTextColor;
+
+        @media screen and (max-width: $break-small) {
+            max-width: 71%;
+            margin: 8px 0;
+        }
+    }
+
+    img {
+        float: right;
+
+        @media screen and (max-width: $break-small) {
+            max-width: 29%;
+        }
+    }
+}
+
+.sectionThree {
+    padding: 8px;
+    background-color: rgb(191, 49, 27);
+    text-align: right;
+
+    p {
+        color: $paragraphTextColor;
+        @media screen and (max-width: $break-small) {
+            margin: 8px 0;
+        }
+    }
+
+    img {
+        float: left;
+        @media screen and (max-width: $break-small) {
+            max-width: 40%;
+        }
+    }
+}
+
+// Following CSS arow styles are credited to a codepan found here https://codepen.io/Sarah_C/pen/jWoEWb
+
+.arrowedLeft {
+    position: relative;
+    left: -35px;
+}
+
+.arrowLeft {
+	/* more triangle */
+	position: relative;
+	height: 0px; width: 0px;
+	border: 12px solid;
+	border-color: 
+    rgb(191, 49, 27)
+    rgb(191, 49, 27)
+		transparent
+		transparent;
+	transform: rotate(225deg); 
+}
+
+.arrowLeft:before {
+	content: '';
+	position: absolute;
+	top: 0px; right: 0px;
+	display: block;
+	height: 12px; width: 16px;
+	background-color:  rgb(191, 49, 27);
+	transform: 
+		rotate(-45deg) 
+		translate(2px, 1px);
+}
+
+.arrowedRight {
+    position: relative;
+    left: 104%;
+    top:65%;
+}
+
+.arrowRight {
+	/* more triangle */
+	position: relative;
+	height: 0px; width: 0px;
+	border: 12px solid;
+	border-color: 
+    rgb(127, 127, 127)
+    rgb(127, 127, 127)
+		transparent
+		transparent;
+	transform: rotate(45deg); 
+}
+
+.arrowRight:before {
+	content: '';
+	position: absolute;
+	top: 0px; right: 0px;
+	display: block;
+	height: 12px; width: 16px;
+	background-color:  rgb(127, 127, 127);
+	transform: 
+		rotate(-45deg) 
+		translate(2px, 1px);
+}
+//end codepen example

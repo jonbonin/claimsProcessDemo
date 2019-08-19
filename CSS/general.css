@@ -1,0 +1,152 @@
+html {
+  width: 100%;
+}
+
+body {
+  max-width: 38%;
+  margin: auto;
+  padding: 12px;
+}
+@media screen and (max-width: 641px) {
+  body {
+    max-width: 88%;
+  }
+}
+
+h1 {
+  color: #c23a24;
+}
+
+#showDetail {
+  display: none;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 10px 10px;
+}
+@media screen and (max-width: 641px) {
+  .wrapper {
+    grid-gap: 6px 6px;
+  }
+}
+
+.bothColLeft {
+  grid-column: span 2;
+  text-align: left;
+}
+
+.sectionOne {
+  background-color: #eeeeee;
+  padding: 8px;
+}
+.sectionOne img {
+  display: block;
+  margin: auto;
+}
+.sectionOne p {
+  text-align: center;
+}
+
+.sectionTwo {
+  padding: 8px;
+  background-color: #7f7f7f;
+}
+.sectionTwo p {
+  display: inline-block;
+  color: white;
+}
+@media screen and (max-width: 641px) {
+  .sectionTwo p {
+    max-width: 71%;
+    margin: 8px 0;
+  }
+}
+.sectionTwo img {
+  float: right;
+}
+@media screen and (max-width: 641px) {
+  .sectionTwo img {
+    max-width: 29%;
+  }
+}
+
+.sectionThree {
+  padding: 8px;
+  background-color: #bf311b;
+  text-align: right;
+}
+.sectionThree p {
+  color: white;
+}
+@media screen and (max-width: 641px) {
+  .sectionThree p {
+    margin: 8px 0;
+  }
+}
+.sectionThree img {
+  float: left;
+}
+@media screen and (max-width: 641px) {
+  .sectionThree img {
+    max-width: 40%;
+  }
+}
+
+.arrowedLeft {
+  position: relative;
+  left: -35px;
+}
+
+.arrowLeft {
+  /* more triangle */
+  position: relative;
+  height: 0px;
+  width: 0px;
+  border: 12px solid;
+  border-color: #bf311b #bf311b transparent transparent;
+  transform: rotate(225deg);
+}
+
+.arrowLeft:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  display: block;
+  height: 12px;
+  width: 16px;
+  background-color: #bf311b;
+  transform: rotate(-45deg) translate(2px, 1px);
+}
+
+.arrowedRight {
+  position: relative;
+  left: 104%;
+  top: 65%;
+}
+
+.arrowRight {
+  /* more triangle */
+  position: relative;
+  height: 0px;
+  width: 0px;
+  border: 12px solid;
+  border-color: #7f7f7f #7f7f7f transparent transparent;
+  transform: rotate(45deg);
+}
+
+.arrowRight:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  display: block;
+  height: 12px;
+  width: 16px;
+  background-color: #7f7f7f;
+  transform: rotate(-45deg) translate(2px, 1px);
+}
+
+/*# sourceMappingURL=general.css.map */

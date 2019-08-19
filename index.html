@@ -1,24 +1,31 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport"
-                content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-        <title>Claims Process</title>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-        <!--start of web components-->
-        <link rel="import" href="/components/claimsProcess.html">
-        <link rel="import" href="/components/customerOptions.html">
-    </head>
-    <body>
-        <p>Test to see if this works</p>
-        <div id="claimsProcessWrapper">
+    <title>Claims Process</title>
+    <!-- homebrewed stylesheet -->
+    <link href="/CSS/general.css" type="text/css" rel="stylesheet" media="screen">
+
+    <!--start of web components-->
+    <link rel="import" href="/components/claimsProcess.html">
+    <link rel="import" href="/components/customerOptions.html">
+</head>
+
+<body>
+    <main>
+        <h1>Claims Process</h1>
+        <div id="hideDetail">
+            <customer-options></customer-options>
+        </div>
+        <div id="showDetail">
             <claims-process></claims-process>
         </div>
-        <div id="claimsProcessWrapper">
-                <customer-options></customer-options>
-            </div>
-    </body>
+    </main>
+</body>
+
 </html>
