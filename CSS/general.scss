@@ -8,7 +8,7 @@ html {
 }
 
 body {
-    max-width: 41%;
+    max-width: 38%;
     margin: auto;
     padding: 12px;
 
@@ -21,9 +21,9 @@ h1 {
     color: rgb(194, 58, 36)
 }
 
-// #showDetail{
-//     display:initial;
-// }
+#showDetail{
+    display:none;
+}
 
 .wrapper {
     display: grid; // grid-template: "L M";
@@ -31,7 +31,7 @@ h1 {
     grid-gap: 10px 10px;
 
     @media screen and (max-width: $break-small) {
-        grid-gap: 8px 8px;
+        grid-gap: 6px 6px;
     }
 }
 
@@ -64,7 +64,7 @@ h1 {
         color: $paragraphTextColor;
 
         @media screen and (max-width: $break-small) {
-            max-width: 67%;
+            max-width: 71%;
             margin: 8px 0;
         }
     }
@@ -73,7 +73,7 @@ h1 {
         float: right;
 
         @media screen and (max-width: $break-small) {
-            max-width: 33%;
+            max-width: 29%;
         }
     }
 }
@@ -85,13 +85,79 @@ h1 {
 
     p {
         color: $paragraphTextColor;
+        @media screen and (max-width: $break-small) {
+            margin: 8px 0;
+        }
     }
 
     img {
         float: left;
-
         @media screen and (max-width: $break-small) {
-            max-width: 45%;
+            max-width: 40%;
         }
     }
 }
+
+// Following CSS arow styles are credited to a codepan found here https://codepen.io/Sarah_C/pen/jWoEWb
+
+.arrowedLeft {
+    position: relative;
+    left: -35px;
+}
+
+.arrowLeft {
+	/* more triangle */
+	position: relative;
+	height: 0px; width: 0px;
+	border: 12px solid;
+	border-color: 
+    rgb(191, 49, 27)
+    rgb(191, 49, 27)
+		transparent
+		transparent;
+	transform: rotate(225deg); 
+}
+
+.arrowLeft:before {
+	content: '';
+	position: absolute;
+	top: 0px; right: 0px;
+	display: block;
+	height: 12px; width: 16px;
+	background-color:  rgb(191, 49, 27);
+	transform: 
+		rotate(-45deg) 
+		translate(2px, 1px);
+}
+
+.arrowedRight {
+    position: relative;
+    left: 104%;
+    top:65%;
+}
+
+.arrowRight {
+	/* more triangle */
+	position: relative;
+	height: 0px; width: 0px;
+	border: 12px solid;
+	border-color: 
+    rgb(127, 127, 127)
+    rgb(127, 127, 127)
+		transparent
+		transparent;
+	transform: rotate(45deg); 
+}
+
+.arrowRight:before {
+	content: '';
+	position: absolute;
+	top: 0px; right: 0px;
+	display: block;
+	height: 12px; width: 16px;
+	background-color:  rgb(127, 127, 127);
+	transform: 
+		rotate(-45deg) 
+		translate(2px, 1px);
+}
+//end codepen example

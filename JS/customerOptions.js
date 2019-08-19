@@ -8,9 +8,20 @@
 
             shadowRoot.appendChild(content.cloneNode(true));
 
-            //make sure that sections are accuratly being displayed
-            this.shadowRoot.querySelector("#showDetail").style.display = "none";
-            this.shadowRoot.querySelector("#hideDetail").style.display = 'initial';
+            //add event lister to show/Hide Detail
+            this.shadowRoot.querySelector('#showDetailAction')
+                .addEventListener('click', this.displayDetail.bind(this));
+            
         };
+
+        displayDetail() {
+            //for some reason, when this function is called, the page seems to be reloading
+            //the result of this is that the detailed version of the site is not being shown
+            //I don't know how to solve this
+            
+            //display update form hide display table
+            document.querySelector("#hideDetail").style.display = 'none';
+            document.querySelector("#showDetail").style.display = 'grid';
+        }
     });
 })()

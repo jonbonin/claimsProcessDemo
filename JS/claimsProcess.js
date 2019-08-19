@@ -10,19 +10,19 @@
 
             shadowRoot.appendChild(content.cloneNode(true));
 
-            //make sure that sections are accuratly being displayed
-            this.shadowRoot.querySelector("#showDetail").style.display = 'none';
-            this.shadowRoot.querySelector("#hideDetail").style.display = 'initial';
-
-            //add event lister to show Hide Detail
+            //add event lister to show/Hide Detail
             this.shadowRoot.querySelector('#hideDetailAction')
-                .addEventListener('click', this.displayDetail.bind(this));
+                .addEventListener('click', this.hideDetail.bind(this));
         };
 
-        displayDetail() {
+        hideDetail() {
+            //I was not able to test this because I could not keep this component on the page
+            //When I call the function to show the detailed version of the page, a force reload
+            //seems to be happening. Because of that I am undable to test if this works
+
             //display update form hide display table
-            this.shadowRoot.querySelector("#showDetail").style.display = 'initial';
-            this.shadowRoot.querySelector("#hideDetail").style.display = 'none';
+            this.shadowRoot.querySelector("#hideDetail").style.display = 'grid';
+            this.shadowRoot.querySelector("#showDetail").style.display = 'none';
         }
     });
 })()
