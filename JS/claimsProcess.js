@@ -16,13 +16,9 @@
         };
 
         hideDetail() {
-            //I was not able to test this because I could not keep this component on the page
-            //When I call the function to show the detailed version of the page, a force reload
-            //seems to be happening. Because of that I am undable to test if this works
-
             //display update form hide display table
-            this.shadowRoot.querySelector("#hideDetail").style.display = 'grid';
-            this.shadowRoot.querySelector("#showDetail").style.display = 'none';
+            document.querySelector("#hideDetail").style.display = 'grid';
+            document.querySelector("#showDetail").style.display = 'none';
         }
     });
 })()
